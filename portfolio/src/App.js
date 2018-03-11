@@ -11,12 +11,16 @@ class App extends Component {
   // }
 
   render() {
-    return (<div className="App Site">
-      <div className= "Site-content">
-        <Logo />
+    return (<div className="App">
+      <div className="Site-content">
+        <div id="logo-wrapper"><Logo/></div>
+        <div id="nav-wrapper"><nav>HELLO NAV</nav></div>
       </div>
-      <Footer />
+      <div id='footer-wrapper'>
+        <Footer/>
+      </div>
     </div>);
+
   }
 }
 
