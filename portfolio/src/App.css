@@ -1,76 +1,99 @@
 * {
   font-family: 'Roboto Condensed', sans-serif;
-  color: white;
+
 }
 
 .App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  /* text-align: center; */
+  display: grid;
   min-height: 100vh;
+  background-color: black;
+  grid-template-columns: 150px 1fr 1fr 1fr 150px;
+  grid-template-rows: 70px auto 1fr 3fr 1fr 30px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  color: white;
+
 }
 
-.Site-content {
+/* .Site-content {
 display: flex;
 flex-grow: 1;
-background-color: black;
+
+} */
+
+#app-bar{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  /* width: 100%; */
 }
 
+.menu {
+  color: black!;
+}
 
-#logo-wrapper {
+.Logo {
 display: flex;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr;
+justify-content: flex-end;
+grid-column-start: 2;
+grid-row-start: 2;
 /* background-color: pink; */
 }
 
 .App-logo {
-  max-width: 80%;
-  height: auto;
-  padding: 40px;
-  margin-top: 30px;
+width: auto;
+height: auto;
+  /* padding: 40px; */
+  /* margin-top: 30px; */
   opacity: 1.0;
 }
 
-#stripe-one {
-  width: 28px;
-  background-color: blue;
-}
-
-#stripe-two {
-  width: 20px;
-  background-color: green;
-}
-
-#stripe-three {
-  width: 7.5px;
-  background-color: red;
-}
 
 #nav-wrapper {
-  background-color: blue;
-  font-size: 1.2rem;
-width: 300px;
-  margin-left: 250px;
-}
-
-
-nav {
-  margin-top: 300px;
-}
-
-p {
+  grid-column-start: 4 ;
+  grid-row-start: 2;
   /* background-color: blue; */
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  /* width: 300px; */
+  /* margin-left: 250px; */
+}
+
+#main-intro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 75px;
+  padding-right: 75px;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 4;
 }
 
 
 #footer-wrapper {
- padding: 10px;
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /* padding: 20px; */
+  /* background-color: red; */
+  grid-row-start: 6;
+  grid-column-start: 1;
+  grid-column-end: 6;
 }
+/* footer {
+  width: 100%;
+  padding: 10px;
+   background-color: blue;
+   grid-row-start: 3;
+   grid-column-start: 2;
+} */
 
 
 
-
+/*
 
 @media only screen and (max-width: 1024px) {}
 
@@ -82,6 +105,6 @@ p {
     margin-top: 75px;
     opacity: 1.0;
   } */
-}
+/* } */
 
-@media only screen and (max-width: 480px) {}
+/* @media only screen and (max-width: 480px) {} */
