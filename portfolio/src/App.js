@@ -14,7 +14,16 @@ class App extends Component {
     return (<div className="App">
       <div className="Site-content">
         <div id="logo-wrapper"><Logo/></div>
-        <div id="nav-wrapper"><nav>HELLO NAV</nav></div>
+        <div id="stripe-one"></div>
+        <div id="stripe-two"></div>
+        <div id="stripe-three"></div>
+        <div id="nav-wrapper">
+          <nav>
+            <ul>one</ul>
+            <ul>two</ul>
+            <ul>three</ul>
+          </nav>
+        </div>
       </div>
       <div id='footer-wrapper'>
         <Footer/>
