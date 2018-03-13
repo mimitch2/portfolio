@@ -9,7 +9,7 @@
   min-height: 100vh;
   background-color: black;
   grid-template-columns: 150px 1fr 1fr 1fr 150px;
-  grid-template-rows: 70px auto 1fr 3fr 1fr 30px;
+  grid-template-rows: 50px auto 1fr 3fr 1fr 30px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   color: white;
@@ -22,10 +22,12 @@ flex-grow: 1;
 
 } */
 
-#app-bar{
+.topNav {
+
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 1;
+  color: black;
   /* width: 100%; */
 }
 
@@ -68,7 +70,7 @@ height: auto;
   padding-left: 75px;
   padding-right: 75px;
   grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-end: 4;
   grid-row-start: 4;
 }
 
@@ -83,14 +85,6 @@ height: auto;
   grid-column-start: 1;
   grid-column-end: 6;
 }
-/* footer {
-  width: 100%;
-  padding: 10px;
-   background-color: blue;
-   grid-row-start: 3;
-   grid-column-start: 2;
-} */
-
 
 
 /*
