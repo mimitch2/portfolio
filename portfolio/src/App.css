@@ -6,13 +6,14 @@
 .App {
   /* text-align: center; */
   display: grid;
-  min-height: 100vh;
-  background-color: black;
-  grid-template-columns: 150px 1fr 1fr 1fr 150px;
-  grid-template-rows: 50px auto 1fr 3fr 1fr 30px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #EFEBE1;
+  grid-template-columns: 125px 1fr 125px;
+  grid-template-rows:  50px 1fr 1fr 1fr 50px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  color: white;
+  color: black;
 
 }
 
@@ -22,58 +23,71 @@ flex-grow: 1;
 
 } */
 
-.topNav {
-
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2B9395;
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 1;
-  color: black;
   /* width: 100%; */
 }
 
-.menu {
-  color: black!;
+.title {
+  grid-column-start: 1;
+  /* grid-column-end: 3; */
+  grid-row-start: 2;
+  margin-left: 24px;
+  font-size: 1.6em;
+  /* background-color: red; */
 }
 
-.Logo {
+.nav-items {
+  font-size: 1.0em;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  margin-right: 10px;
+}
+
+
+.logo-div {
+width: auto;
+height: 207px;
 display: flex;
-grid-template-columns: 1fr;
-grid-template-rows: 1fr;
-justify-content: flex-end;
-grid-column-start: 2;
-grid-row-start: 2;
+justify-content: center;
+align-items: center;
 /* background-color: pink; */
+margin-top: 10px;
+margin-left: 100px;
 }
 
 .App-logo {
 width: auto;
-height: auto;
+height: 100%;
   /* padding: 40px; */
   /* margin-top: 30px; */
-  opacity: 1.0;
-}
 
-
-#nav-wrapper {
-  grid-column-start: 4 ;
-  grid-row-start: 2;
-  /* background-color: blue; */
-  font-size: 1.2rem;
-  /* width: 300px; */
-  /* margin-left: 250px; */
 }
 
 #main-intro{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 75px;
-  padding-right: 75px;
+  /* padding-left: 75px;
+  padding-right: 75px; */
   grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 4;
+  /* grid-column-end: 4; */
+  grid-row-start: 3;
+  padding: 50px;
+  /* background-color: green; */
 }
 
+.intro-text {
+  /* background-color: pink; */
+  width: 400px;
+}
 
 #footer-wrapper {
   display: flex;

@@ -4,7 +4,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import './App.css';
 
-class TopNav extends Component {
+class DrawerComp extends Component {
   constructor(props) {
     super(props);
     this.state = {open: false};
@@ -22,15 +22,13 @@ class TopNav extends Component {
 
   render() {
     return (<div className="topNav">
-      <nav><AppBar id= "app-bar"
-        title="Mike Mitchell Web Development"
-        onLeftIconButtonClick={this.handleMenuClick}/></nav>
+      <header className= "top-bar"><span className="title">Mike Mitchell Web Development</span> <nav> <ul><li onClick={this.handleMenuClick}>HELLO</li> GOODBYE GOODNIGHT</ul></nav></header>
+      <MuiThemeProvider>
       <Drawer
         docked={false}
         width={200}
         open={this.state.open}
-        onRequestChange={(open) => this.setState({open})}
-      >
+        onRequestChange={(open) => this.setState({open})}>
         <MenuItem onClick={this.handleRequestClose}>Menu Item</MenuItem>
         <MenuItem onClick={this.handleRequestClose}>Menu Item 2</MenuItem>
       </Drawer>
@@ -38,4 +36,4 @@ class TopNav extends Component {
   }
 }
 
-export default TopNav;
+export default DrawerComp;
