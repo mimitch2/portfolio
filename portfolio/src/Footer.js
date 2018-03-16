@@ -6,7 +6,7 @@ class Footer extends Component {
 
   render() {
     return (<div className="Footer">
-    ©Mike Mitchell 2018.  Design & code by Mike Mitchell.
+      <footer>©Mike Mitchell 2018.  Design & code by Mike Mitchell.</footer>
     </div>);
   }
 }
