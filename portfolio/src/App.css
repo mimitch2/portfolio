@@ -14,7 +14,7 @@ html, body {
   height: 100vh;
   width: 100vw;
   grid-template-columns: 125px 1fr 125px;
-  grid-template-rows:  50px 1fr 1fr 1fr 50px;
+  grid-template-rows:  50px 1fr 1fr 1fr 10px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   color: black;
@@ -22,35 +22,30 @@ html, body {
 
 
 .logo-div {
-width: 175px;
-height: 207px;
+width: 150px;
+height: 175px;
 display: flex;
 justify-content: center;
 align-items: flex-start;
-/* background-color: pink; */
 margin-left: 22px;
 margin-top: 20px;
 grid-column-start: 1;
 grid-row-start: 2;
+/* background-color: red; */
 }
 
 .App-logo {
-width: auto;
-height: 100%;
+width: 100%;
+height: auto;
 
 }
 
 #main-intro{
-
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-left: 75px;
-  padding-right: 75px; */
   grid-column-start: 2;
-  /* grid-column-end: 4; */
   grid-row-start: 3;
-  /* background-color: green; */
 }
 
 .intro-text {
@@ -58,17 +53,18 @@ height: 100%;
   width: 400px;
 }
 
-#footer-wrapper {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
- padding: 10px;
-  /* background-color: red; */
+  padding: 5px;
+  background-color: #2B9395;
+  font-weight: bold;
   grid-row-start: 6;
   grid-column-start: 1;
   grid-column-end: 6;
-  /* background-color: pink; */
 }
+
 
 
 /*
