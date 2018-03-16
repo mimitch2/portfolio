@@ -18,40 +18,7 @@ html, body {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   color: black;
-
 }
-
-/* .Site-content {
-display: flex;
-flex-grow: 1;
-
-} */
-
-.top-nav {
-  /* position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100vw;
-  height: 60px; */
-  /* grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 1; */
-  /* width: 100%; */
-}
-
-.title {
-  background-color: #2B9395;
-  grid-column-start: 1;
-  /* grid-column-end: 3; */
-  grid-row-start: 2;
-  margin-left: 24px;
-  font-size: 1.6em;
-  /* background-color: red; */
-}
-
-
 
 
 .logo-div {
