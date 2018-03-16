@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {Drawer, MenuItem} from 'material-ui';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './App.css';
 
-export default class TopBar extends React.Component {
+class TopBar extends Component  {
   constructor(props) {
     super(props);
     this.state = {open: false};
@@ -24,6 +25,7 @@ export default class TopBar extends React.Component {
       <header className= "top-bar"><span className="title">Mike Mitchell Web Development</span> <nav><span onClick={this.handleMenuClick}>HELLO</span> GOODBYE GOODNIGHT</nav></header>
       <MuiThemeProvider>
         <Drawer
+          openSecondary={true}
           docked={false}
           width={200}
           open={this.state.open}
@@ -34,3 +36,4 @@ export default class TopBar extends React.Component {
     </div>);
   }
 }
+export default TopBar;
