@@ -30,12 +30,12 @@ class TopBar extends Component  {
 
   render() {
     return (<div className="top-nav">
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+      <MuiThemeProvider>
         <AppBar className = 'top-bar' title="MJM Web Development"
           iconElementRight = {<NavButtons/>}
-          style = {{backgroundColor: '#2B9395',
-            width: '100vw'}}
-          titleStyle = {{fontSize: '1.6em', fontWeight: 'bold', textTransform: 'uppercase', color: 'black'}}
+          style = {{backgroundColor: 'black', opacity: '.8',
+            width: '100vw', position: 'fixed'}}
+          titleStyle = {{fontSize: '1.9em', fontWeight: 'bold', textTransform: 'uppercase'}}
           iconStyleLeft = {{color: 'red'}}
           onLeftIconButtonClick={this.handleMenuClick}/>
       </MuiThemeProvider>
