@@ -13,7 +13,7 @@ class NavButtons extends Component {
 
       <a href="https://www.linkedin.com/in/mike-mitchell-706a9117/"><svg className = 'linked-in-icon' xmlns="http://www.w3.org/2000/svg" style= {iconStyles} width="24" height="24" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
 
-      <a href="mailto:<mimitch@mac.com>?subject=I'm interested in your services!"><svg className = 'email-icon' xmlns="http://www.w3.org/2000/svg" style= {iconStyles} width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/></svg></a>
+      <a href="mailto:<mimitch@mac.com>?subject=I'm interested in your services!"><svg className = 'email-icon' xmlns="http://www.w3.org/2000/svg" style= {iconStyles} width="24" height="24" viewBox="0 0 24 24"><path d="M.026 24l11.974-11.607 11.974 11.607h-23.948zm11.964-23.961l-11.99 8.725v12.476l7.352-7.127-5.653-4.113 10.291-7.488 10.309 7.488-5.655 4.108 7.356 7.132v-12.476l-12.01-8.725z"/></svg></a>
     </div>);
   }
 }

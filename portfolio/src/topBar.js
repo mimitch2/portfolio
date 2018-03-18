@@ -6,6 +6,14 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavButtons from './navButtons.js';
 import './App.css';
 
+
+
+const menuItemStyle = {
+  color: 'white',
+  fontSize: '1.2em',
+  paddingLeft: '20px'
+}
+
 class TopBar extends Component  {
   constructor(props) {
     super(props);
@@ -22,26 +30,28 @@ class TopBar extends Component  {
 
   render() {
     return (<div className="top-nav">
-
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        <AppBar title="MJM Web Development"
+        <AppBar className = 'top-bar' title="MJM Web Development"
           iconElementRight = {<NavButtons/>}
           style = {{backgroundColor: '#2B9395',
             width: '100vw'}}
-          titleStyle = {{fontSize: '2.0em', fontWeight: 'bold', textTransform: 'uppercase', color: 'black'}}
+          titleStyle = {{fontSize: '1.6em', fontWeight: 'bold', textTransform: 'uppercase', color: 'black'}}
           iconStyleLeft = {{color: 'red'}}
           onLeftIconButtonClick={this.handleMenuClick}/>
       </MuiThemeProvider>
       <MuiThemeProvider>
         <Drawer
-          style = {{backgroundColor: '#2B9395'}}
+          containerStyle = {{backgroundColor: 'black'}}
           openSecondary={false}
           docked={false}
-          width={200}
+          width= {173}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}>
-          <MenuItem onClick={this.handleRequestClose}>Menu Item</MenuItem>
-          <MenuItem onClick={this.handleRequestClose}>Menu Item 2</MenuItem>
+          <h2 style = {{color: 'white', paddingLeft: '16px'}} onClick={this.handleRequestClose}>PROJECTS</h2>
+          <a href="http://www.apple.com"><MenuItem onClick={this.handleRequestClose}
+            style = {menuItemStyle}>Menu Item</MenuItem></a>
+          <MenuItem onClick={this.handleRequestClose}
+            style = {menuItemStyle}>Menu Item 2</MenuItem>
         </Drawer>
       </MuiThemeProvider>
     </div>);
