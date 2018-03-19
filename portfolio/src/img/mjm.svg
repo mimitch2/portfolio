@@ -1,24 +1,14 @@
-import React, {Component} from 'react';
 
-class Logo extends Component {
+<svg width="742px" height="914px" viewBox="0 0 742 914" version="1.1">
 
-
-  render() {
-    return (<div className="logo-div">
-      <svg width="100%"  viewBox="0 0 742 914" version="1.1">
-        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <g id="Black" transform="translate(0.000000, 30.000000)">
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Black" transform="translate(0.000000, 30.000000)">
             <polygon id="M" fill="#000000" points="0.5 725 0.5 84.2 88.7 84.2 206.6 423.5 208.4 423.5 325.4 84.2 414.5 84.2 414.5 725 322.7 725 322.7 335.3 320.9 335.3 230 610.7 184.1 610.7 94.1 335.3 92.3 335.3 92.3 725"></polygon>
             <polygon id="M" fill="#000000" points="326.5 725 326.5 84.2 414.7 84.2 532.6 423.5 534.4 423.5 651.4 84.2 740.5 84.2 740.5 725 648.7 725 648.7 335.3 646.9 335.3 556 610.7 510.1 610.7 420.1 335.3 418.3 335.3 418.3 725"></polygon>
             <path d="M419.5075,204.16 L419.5075,718.24 C419.5075,764.23023 405.017645,802.659846 376.0375,833.53 C361.547428,848.650076 344.380099,860.619956 324.535,869.44 C308.855746,876.408557 272.341405,881.207191 259.458984,882.67 C246.576564,884.132809 256.1875,883.403809 255.0775,882.67 C253.9675,881.936191 255.0775,786.024414 255.0775,786.024414 C259.458984,786.024414 270.197462,785.177511 277.7575,782.9725 C285.317538,780.767489 292.562465,776.515032 299.4925,770.215 C306.422535,764.544972 312.092478,756.512552 316.5025,746.1175 C320.912522,735.722448 323.1175,722.020085 323.1175,705.01 L323.1175,204.16 L419.5075,204.16 Z" id="J" fill="#000000"></path>
             <path d="M30,30 L711.521739,30" id="Line" stroke="#000000" strokeWidth="60" strokeLinecap="square"></path>
             <path d="M30,779 L197,779" id="Line" stroke="#000000" strokeWidth="60" strokeLinecap="square"></path>
             <path d="M476,778 L711.521583,778" id="Line" stroke="#000000" strokeWidth="60" strokeLinecap="square"></path>
-          </g>
         </g>
-      </svg>
-    </div>);
-  }
-}
-
-export default Logo;
+    </g>
+</svg>
