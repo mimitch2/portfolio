@@ -1,0 +1,56 @@
+
+* {font-family: "Monda";
+color: white;
+}
+
+body {
+  background-color: rgb(50, 50, 50)
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.boxOne {
+  display: flex;
+  justify-content: center;
+margin-top: 50px;
+}
+
+.james {  display: flex;
+  justify-content: center;}
+
+#jamesImg {width: 150;
+height: 250px;
+filter: drop-shadow(5px 5px 5px black);
+}
+
+.scale {
+  transform: rotate(3deg) scale(.95);
+
+}
+#jamesImg.scale {filter: drop-shadow(3px 3px 10px white);}
+
+#arrow {font-size: 4.0rem}
+#click {font-size: 3.0rem}
+
+footer {display: flex;
+justify-content: center;
+align-self: flex-end;}
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}

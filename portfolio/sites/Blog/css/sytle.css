@@ -1,0 +1,113 @@
+span {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: black;
+}
+
+}
+
+body {
+  background-color: lightgrey;
+  font-family: "Monda";
+  margin: 20px;
+  padding: 10px;
+}
+
+hr.style1{
+  border-top: 3px double #8c8b8b;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 500px;
+}
+header {
+  text-align: center;
+  font-family: "Orbitron";
+  font-weight: bold;
+  font-size: 60px;
+  text-shadow: 4px 4px 8px grey;
+  background-color: rgb(200, 241, 222);
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.navbar {
+  font-family: "Monda";
+  text-align: center;
+  text-decoration: underline;
+}
+
+/*This is to set a class */
+
+/*nav {text-align: center;}  this sets the actual "nav" sectiion*/
+
+aside {
+  font-family: "Orbitron";
+  font-size: 20px;
+  text-shadow: 4px 4px 8px grey;
+  background-color: rgb(200, 241, 222);
+  width: max-content;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+
+button {
+  font-family: "Monda";
+}
+
+input {font-family: "Monda";
+width: 200px;}
+
+main {
+  font-family: "Monda";
+  font-size: 14px;
+  background-color: rgb(50, 50, 50);
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  margin: 20px;
+  padding: 10px;
+}
+
+#back {
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+}
+
+#firstp {
+  text-align: center;
+}
+
+/*this is to set an ID*/
+
+#secondp {
+  text-align: center;
+}
+
+#firstline {
+  text-align: center;
+}
+
+#bottomlink {
+  text-align: center;
+}
+
+#image1 img {
+  display: block;
+  margin: auto;
+}
+
+a:hover {
+  color: blue;
+}

@@ -1,0 +1,147 @@
+* {
+  /* font-family: 'Press Start 2P', cursive; */
+font-family: 'Denk One', sans-serif;
+text-transform: uppercase;
+/* font-family: 'Slackey', cursive; */
+
+  /*color: lightgrey;*/
+  /* font-size: .625rem; */
+  /*resets default of 16px to 10px making it
+  simple to translate rem sizes to px size. example: 1.6rem now = 16px*/
+}
+
+html {
+  overflow-x: hidden;
+  /* font-size: 2.0rem; */
+}
+
+.tacoDiv, .feedText, .arrow {
+  /* background-color: grey; */
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+#downArrow {
+height: 80px;
+transition: 300ms;
+margin-right: 50px;
+margin-bottom: 10px;
+}
+
+.arrowScale {
+  transform: scale(1.2);
+  transition: 300ms;
+
+}
+
+.row {
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
+}
+
+div {
+  /* background-color: pink; */
+  /* margin: 10px; */
+}
+
+body {
+  font-size: 2.0rem;
+  /* background-color: black; */
+  /* display: flex; */
+}
+
+.click-counter {
+  /* float: right; */
+}
+
+.animation {
+  background-image: url(../img/Background_smaller.png);
+  background-repeat: repeat-x;
+  /* width: 100%;
+  height: 100%; */
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  /* display: flex;
+  justify-content: center; */
+}
+
+.running {
+  margin-left: 10%;
+  margin-top: 80px;
+ /* filter: drop-shadow(0px 10px 0px black); */
+}
+
+.col {
+  align-self: center;
+}
+
+.taco {
+  width: 125px;
+  height: 125px;
+}
+
+
+.taco1
+{
+  display: block;
+}
+
+.taco2 {
+  display: none;
+}
+
+
+
+.click-counter, .mph, .money  {
+  position: absolute;
+  /* color: lightgrey; */
+
+}
+
+.mph {
+  margin-left: 86%
+}
+
+.money {
+margin-left: 47%;
+}
+
+.animation img {
+  display: none;
+}
+
+.animation img:first-child {
+  display: block;
+}
+
+footer {
+  font-size: .8rem;
+  display: flex;
+  justify-content: center;
+}
+
+/*below are for design only, FIXME remove*/
+
+/*#ratio, #ratioRotated {
+  display: none;
+  opacity: .8;
+  position: fixed;
+}
+
+#ratio {
+  width: 100%;
+  height: auto;
+}
+
+#ratioRotated {
+  height: 100%;
+  width: auto;
+}
+
+#P, #LS {
+  font-size: inherit;
+}*/
+
+/*----------------------------------------->
