@@ -9,11 +9,11 @@ html, body {
 }
 
 .App {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: 170px 800px 125px;
+  grid-template-columns: 200px  8fr 2fr ;
   grid-template-rows: 50px 350px 200px 400px 200px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -28,13 +28,13 @@ html, body {
   height: 100vh;
   margin-left: 18px;
   margin-top: 80px;
-  grid-column-start: 1;
-  grid-row-start: 2;
+  /* grid-column-start: ;
+  grid-row-start: 2; */
   /* background-color: red; */
 }
 
 .main-image-div{
-max-width: 750px;
+/* max-width: 750px; */
   margin-top: 20px;
   grid-column-start: 2;
   grid-row-start: 2;
@@ -43,7 +43,7 @@ max-width: 750px;
 }
 
 .web-design-image {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .into-headline {
