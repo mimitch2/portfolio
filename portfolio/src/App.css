@@ -13,12 +13,13 @@ html, body {
   display: grid;
   height: 100vh;
   /* width: 100vw; */
-  grid-template-columns: 170px 800px 125px;
+  grid-template-columns: 170px 750px 125px;
   grid-template-rows: 50px 1fr 1fr 1fr 10px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   color: black;
 }
+
 
 
 .logo-div {
@@ -39,12 +40,13 @@ html, body {
 
 .github-icon, .email-icon, .linked-in-icon {
   fill: white;
+
 }
 
 .main-image-div{
   /* position: fixed; */
-  margin-top: 40px;
-  width: 800px;
+  margin-top: 30px;
+  width: 750px;
   height: auto;
   grid-column-start: 2;
   grid-row-start: 2;
@@ -66,12 +68,40 @@ html, body {
 }
 
 .intro-text {
+  padding=left: 20px;
   /* position: fixed; */
   font-size: 1.1em;
   /* background-color: pink; */
   width: 800px;
 }
 
+.menu-item-wrapper {
+  display: flex;
+  align-content: center;
+  width: max-content;
+}
+.menu-arrow-div {
+  padding-top: 42px;
+  padding-left: 30px;
+}
+.menu-icon-div {
+  align-self: center;
+    margin-right: 25px;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.menu-svg{
+ /* height: 3em; */
+}
+
+a {
+  text-decoration: none!important
+}
+
+a:hover {
+  color: red!important;
+}
 
 footer {
   left: 0;
@@ -84,7 +114,7 @@ footer {
   background-color: black;
   opacity: .8;
   width: 100vw;
-  height: 20px;
+  height: 19.6px;
   font-size: .8em;
   font-weight: lighter;
   color: white;
@@ -92,6 +122,8 @@ footer {
   grid-column-start: 1;
   box-shadow: rgba(0, 0, 0, 0.12) 0px -1px 6px, rgba(0, 0, 0, 0.12) 0px -1px 4px;
 }
+
+
 
 
 

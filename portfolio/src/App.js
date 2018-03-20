@@ -4,7 +4,6 @@ import Logo from './RenderLogo.js';
 import Footer from './Footer.js';
 import TopBar from './topBar.js';
 import MainImage from './mainImage.js'
-import MainPaper from './paper.js'
 import './App.css';
 
 
