@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Logo from './RenderLogo.js';
 import Footer from './Footer.js';
 import TopBar from './topBar.js';

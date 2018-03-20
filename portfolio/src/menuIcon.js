@@ -2,10 +2,7 @@
 
 import React, {Component} from 'react';
 class MenuIcon extends Component {
-  constructor(props) {
-    super(props);
 
-  }
 
   render() {
     return (<div className="menu-icon-div">
