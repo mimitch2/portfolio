@@ -2,11 +2,10 @@ import React, {Component} from 'react';
 
 class Logo extends Component {
 
-
   render() {
     return (<div className="logo-div">
       <svg width="100%"  viewBox="0 0 742 914" version="1.1">
-        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Page-1" stroke="none" strokeWidth="1" fill="#3A5158" fillRule="evenodd">
           <g id="Black" transform="translate(0.000000, 30.000000)">
             <polygon id="M" fill="#000000" points="0.5 725 0.5 84.2 88.7 84.2 206.6 423.5 208.4 423.5 325.4 84.2 414.5 84.2 414.5 725 322.7 725 322.7 335.3 320.9 335.3 230 610.7 184.1 610.7 94.1 335.3 92.3 335.3 92.3 725"></polygon>
             <polygon id="M" fill="#000000" points="326.5 725 326.5 84.2 414.7 84.2 532.6 423.5 534.4 423.5 651.4 84.2 740.5 84.2 740.5 725 648.7 725 648.7 335.3 646.9 335.3 556 610.7 510.1 610.7 420.1 335.3 418.3 335.3 418.3 725"></polygon>

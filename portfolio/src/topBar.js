@@ -13,7 +13,6 @@ const menuItemStyle = {
   fontSize: '2.0em',
   marginTop: '30px',
   textTransform: 'uppercase',
-  fontWeight: 'bold',
 }
 
 const menuDescStyle = {
@@ -31,9 +30,14 @@ const drawerStyle = {
   // boxShadow: 'rgba(0, 0, 0, 0.23) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 0px 0px'
 }
 
+const drawerOverlayStyle = {
+  // marginTop: '64px',
+  // opacity: '.8'
+}
+
 const appBarStyle = {
-  style: {backgroundColor: 'black', opacity: '.8', width: '100vw', position: 'fixed'},
-  titleStyle: {fontSize: '2.0em', textTransform: 'uppercase'}
+  style: {backgroundColor: 'black', opacity: '.8', width: '100vw', position: 'fixed', display: 'flex', alignItems: 'center'},
+  titleStyle: {fontSize: '2.0em', textTransform: 'uppercase', fontWeight: 'lighter'}
 }
 
 
@@ -45,7 +49,6 @@ class TopBar extends Component  {
 
   handleMenuClick = (e) => {
     this.setState({open: !this.state.open});
-    console.log('HERE');
   }
 
   handleRequestClose = (e) => {
@@ -70,7 +73,8 @@ class TopBar extends Component  {
           containerStyle = {drawerStyle} openSecondary={false}
           docked={false} width= '50%' open={this.state.open}
           zDepth={0}
-          onRequestChange={(open) => this.setState({open})}>
+          onRequestChange={(open) => this.setState({open})}
+          overlayStyle = {drawerOverlayStyle}>
 
           <h2 style = {{color: 'white', paddingLeft: '16px'}} onClick={this.handleRequestClose}>PROJECTS</h2>
           <a href="http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html" className='menu-item-wrapper' ><MenuArrow/><MenuItem onClick={this.handleRequestClose}
