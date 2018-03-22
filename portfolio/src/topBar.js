@@ -27,6 +27,9 @@ const drawerStyle = {
   opacity: '.8',
   marginTop: '64px',
   height: 'calc(100vh - 99.2px)',
+  '@media(minWidth: 780px)' : {
+    width: '80%'
+  }
   // boxShadow: 'rgba(0, 0, 0, 0.23) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 0px 0px'
 }
 
@@ -59,7 +62,7 @@ class TopBar extends Component  {
   render() {
     return (<div className="top-nav">
       <MuiThemeProvider>
-        <AppBar className = 'top-bar' title="MJM Web Development"
+        <AppBar className = 'top-bar' title="Mike Mitchell"
           iconElementRight = {<NavButtons/>}
           iconElementLeft = {<MenuIcon click = {this.handleMenuClick}/>}
           style = {appBarStyle.style}
@@ -71,8 +74,9 @@ class TopBar extends Component  {
         <Drawer
           onClick = {this.getDrawerHeightNumber}
           containerStyle = {drawerStyle} openSecondary={false}
-          docked={false} width= '50%' open={this.state.open}
+          docked={false} open={this.state.open}
           zDepth={0}
+          width='50%'
           onRequestChange={(open) => this.setState({open})}
           overlayStyle = {drawerOverlayStyle}>
 

@@ -5,6 +5,7 @@ import TopBar from './topBar.js';
 import MainImage from './mainImage.js'
 import NextImage from './nextImage.js'
 
+
 import './App.css';
 
 
@@ -15,6 +16,7 @@ class App extends Component {
       <nav><TopBar/></nav>
 
       <Logo/>
+
       <MainImage/>
 
       <div className="main-intro">
