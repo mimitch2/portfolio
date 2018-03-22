@@ -114,6 +114,11 @@ a {
 .nav-icon {
   fill: white;
   width: 26px;
+  
+}
+
+.nav-icon-hide {
+  display: none;
 }
 
 .nav-icon:hover {
