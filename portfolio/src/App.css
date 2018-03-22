@@ -114,14 +114,11 @@ a {
 .nav-icon {
   fill: white;
   width: 26px;
-  
+
 }
 
-.nav-icon-hide {
-  display: none;
-}
 
-.nav-icon:hover {
+.nav-icon:active {
   fill: grey;
 }
 
@@ -150,7 +147,6 @@ footer {
   grid-column-start: 1;
   /* box-shadow: rgba(0, 0, 0, 0.12) 0px -1px 6px, rgba(0, 0, 0, 0.12) 0px -1px 4px; */
 }
-
 
 
 /*MEDIA QUERIES */
