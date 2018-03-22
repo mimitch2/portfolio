@@ -4,6 +4,7 @@ import Footer from './Footer.js';
 import TopBar from './topBar.js';
 import MainImage from './mainImage.js'
 import NextImage from './nextImage.js'
+import JsImage from './js_comp.js'
 
 
 import './App.css';
@@ -25,6 +26,7 @@ class App extends Component {
         </p> </div>
 
       <NextImage/>
+      <JsImage/>
       <div className="bottom-space"></div>
 
       <footer>

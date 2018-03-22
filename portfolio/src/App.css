@@ -14,7 +14,7 @@ html, body {
 .App {
   display: grid;
   grid-template-columns: 8px 1% 125px 750px 1fr;
-  grid-template-rows: 50px 350px 200px 400px 200px;
+  grid-template-rows: 50px 350px 200px 400px 600px 100px auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
@@ -89,7 +89,18 @@ html, body {
   /* background-color: pink; */
 }
 
-.next-image {
+.js-comp-image-div{
+  width: 750px;
+  display: flex;
+  align-items: center;
+  height: auto;
+  grid-column-start: 4;
+  grid-row-start: 5;
+  margin-top: 50px;
+}
+
+.next-image, .js-comp-image {
+
   max-width: 100%;
   /* padding: 50px; */
 }
@@ -123,9 +134,10 @@ a {
 }
 
 .bottom-space {
+  width: 100vw;
   height: 100px;
   /* background-color: pink; */
-  grid-row-start: 5;
+  grid-row-start: 7;
 }
 
 footer {
