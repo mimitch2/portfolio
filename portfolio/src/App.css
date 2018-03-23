@@ -112,10 +112,7 @@ html, body {
   width: max-content;
 }/*FIXME put this into AppBar*/
 
-.menu-arrow-div {
-  padding-top: 42px;
-  padding-left: 30px;
-}/*FIXME put this into menuArrow*/
+
 
 
 a {
