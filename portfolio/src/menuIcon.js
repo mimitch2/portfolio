@@ -5,9 +5,29 @@ import {spin, spinBackward} from './menuIconKeyframes.css';
 
 
 
+/*FIXME this is SUPER hacky, need to refactor all the repetition or try to use state*/
+const iconStyleInitial = {
+  height: '28px',
+  cursor: 'pointer',
+  marginRight: '10px',
+  marginLeft: '10px',
+  marginBottom: '8px',
+  fill: 'white',
+}
 
-const iconStyle = {
+const iconStyleOpen = {
   animationName: 'spin',
+  animationDuration: '.4s',
+  height: '28px',
+  cursor: 'pointer',
+  marginRight: '10px',
+  marginLeft: '10px',
+  marginBottom: '8px',
+  fill: 'white',
+}
+
+const iconStyleClose = {
+  animationName: 'spinBackward',
   animationDuration: '.4s',
   height: '28px',
   cursor: 'pointer',
@@ -26,18 +46,22 @@ class MenuIcon extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navIconCss: iconStyle,
-      cancelIconCss: iconHide
+      navIconCss: iconStyleInitial,
+      cancelIconCss: iconHide,
+
     }
   }
 
+
   handleMenuClick=()=> {
-    if(this.state.navIconCss === iconStyle) {
+    if(this.state.navIconCss === iconStyleInitial || this.state.navIconCss === iconStyleClose) {
       this.props.click();
-      this.setState({navIconCss: iconHide, cancelIconCss: iconStyle});
+      this.setState({navIconCss: iconHide, cancelIconCss: iconStyleOpen});
+
     }else{
-      this.setState({navIconCss: iconStyle, cancelIconCss: iconHide})
       this.props.clickClose();
+      this.setState({navIconCss: iconStyleClose, cancelIconCss: iconHide})
+
     }
   }
 
@@ -53,6 +77,7 @@ class MenuIcon extends Component {
       </div>
 
     </div>);
+
   }
 }
 

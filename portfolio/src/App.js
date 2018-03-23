@@ -20,7 +20,7 @@ class App extends Component {
 
       <div className="main-image-div">
         <img src= {mainImage} className = 'web-design-image' alt="web design" />
-      </div>);
+      </div>
 
       <div className="main-intro">
         <h1 className="into-headline">Hi, I'm Mike. I design & build websites.</h1>
@@ -28,17 +28,19 @@ class App extends Component {
         </p> </div>
 
       <div className="next-image-div">
-        <img src= {nextImage} className = 'next-image' alt="more web design" />
-      </div>);
+        <img src= {nextImage} className = 'next-image' alt="more web design"/>
+      </div>
+
       <div className="js-comp-image-div">
         <img src= {jsCompImage} className = 'js-comp-image' alt="computer with javascript" />
-      </div>);
+      </div>
+
       <div className="bottom-space"></div>
 
       <footer>
         <Footer/>
       </footer>
-    </div>);
+    </div>)
 
   }
 }
