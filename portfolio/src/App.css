@@ -22,7 +22,7 @@ html, body {
 @keyframes logo {
   from {left: -70px; opacity: 0}
   to {left: 18px; opacity: .8;}
-}
+} /*FIXME put this into RenderLogo*/
 
 .logo-div {
   opacity: .8;
@@ -34,11 +34,11 @@ html, body {
   grid-row-start: 2;
   animation-name: logo;
   animation-duration: .8s;
-}
+}/*FIXME put this into RenderLogo*/
 
 .logo-svg {
   width: 100%;
-}
+}/*FIXME put this into RenderLogo*/
 
 .main-image-div{
 
@@ -110,12 +110,12 @@ html, body {
   display: flex;
   align-content: center;
   width: max-content;
-}
+}/*FIXME put this into AppBar*/
 
 .menu-arrow-div {
   padding-top: 42px;
   padding-left: 30px;
-}
+}/*FIXME put this into menuArrow*/
 
 
 a {
@@ -125,16 +125,15 @@ a {
 .nav-icon {
   fill: white;
   width: 26px;
-
+/*FIXME put this into navButtons*/
 }
 
 
 .nav-icon:active {
   fill: grey;
-}
+}/*FIXME put this into navButtons*/
 
 .bottom-space {
-  width: 100vw;
   height: 100px;
   /* background-color: pink; */
   grid-row-start: 7;
@@ -158,7 +157,7 @@ footer {
   grid-row-start: 6;
   grid-column-start: 1;
   /* box-shadow: rgba(0, 0, 0, 0.12) 0px -1px 6px, rgba(0, 0, 0, 0.12) 0px -1px 4px; */
-}
+}/*FIXME put this into Footer*/
 
 
 /*MEDIA QUERIES */
