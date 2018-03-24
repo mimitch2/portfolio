@@ -51,8 +51,7 @@ const appBarStyle = {
   titleStyle: {fontSize: '2.0em', textTransform: 'uppercase', fontWeight: 'bold'}
 }
 
-
-class TopBar extends Component  {
+class TopBar extends Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -69,12 +68,14 @@ class TopBar extends Component  {
     this.setState({open: false});
   }
 
-  handleMenuClick(e, url){
-    let clickedOn = e.currentTarget.firstChild.firstChild;
+  handleMenuClick(e){
+    const getUrl = e.currentTarget;
+    const clickedOn = e.currentTarget.firstChild.firstChild;
+    console.log(clickedOn, e.currentTarget.id);
     clickedOn.style ="animation-name: spin; animation-duration: .4s;"
+    setTimeout( () => {clickedOn.style = "animationName: none;";
+      window.open(getUrl.id, '_blank')}, 500)
 
-
-    setTimeout( () =>{ clickedOn.style = "animationName: none;"}, 500)
   }
 
   menuArrow(){
@@ -106,12 +107,11 @@ class TopBar extends Component  {
 
           <h2 style = {{color: 'white', paddingLeft: '16px'}}>PROJECTS</h2>
 
+          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Monster Run <span className="menu-desc" style={menuDescStyle}>&nbsp;an interactive click game</span></MenuItem></div>
 
-          <div className='menu-item-wrapper' ref ="test" onClick = {this.handleMenuClick}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Monster Run <span className="menu-desc" style={menuDescStyle}>&nbsp;an interactive click game</span></MenuItem></div>
+          <div onClick = {this.handleMenuClick} id ="http://www.mikejmitchell.com/mainPage/sites/Starlight/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;a basic HTML/CSS website</span></MenuItem></div>
 
-          <div className='menu-item-wrapper'  onClick = { this.handleMenuClick}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;a basic HTML/CSS website</span></MenuItem></div>
-
-          <div className='menu-item-wrapper'  ref ="test" onClick = {this.handleMenuClick}  >{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;another basic HTML/CSS website</span></MenuItem></div>
+          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/Portfolio/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;another basic HTML/CSS website</span></MenuItem></div>
 
         </Drawer>
       </MuiThemeProvider>
