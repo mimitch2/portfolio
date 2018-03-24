@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import MenuIcon from './menuIcon.js'
-// import MenuArrow from './menuArrow.js'
 import NavButtons from './navButtons.js';
 import {Drawer, MenuItem, AppBar} from 'material-ui';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -42,7 +41,6 @@ const drawerStyle = {
   opacity: '.8',
   marginTop: '64px',
   height: 'calc(100vh - 98.6px)'
-
 }
 
 
@@ -56,7 +54,6 @@ class TopBar extends Component{
     super(props);
     this.state = {
       open: false,
-      menuArrowCss: menuArrowNoSpin
     }
   }
 
@@ -71,7 +68,7 @@ class TopBar extends Component{
   handleMenuClick(e){
     const getUrl = e.currentTarget;
     const clickedOn = e.currentTarget.firstChild.firstChild;
-    console.log(clickedOn, e.currentTarget.id);
+    // console.log(clickedOn, e.currentTarget.id);
     clickedOn.style ="animation-name: spin; animation-duration: .4s;"
     setTimeout( () => {clickedOn.style = "animationName: none;";
       window.open(getUrl.id, '_blank')}, 500)
