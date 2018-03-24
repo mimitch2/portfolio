@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import MenuIcon from './menuIcon.js'
+// import MenuArrow from './menuArrow.js'
 import NavButtons from './navButtons.js';
 import {Drawer, MenuItem, AppBar} from 'material-ui';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -60,7 +61,7 @@ class TopBar extends Component  {
     }
   }
 
-  handleMenuClick = (e) => {
+  handleDrawerClick = (e) => {
     this.setState({open: !this.state.open});
   }
 
@@ -68,13 +69,12 @@ class TopBar extends Component  {
     this.setState({open: false});
   }
 
-  delayClick(url){
-    this.setState({menuArrowCss: menuArrowSpin})
-    setTimeout( () =>{ window.open(url, "_blank")}, 400 );
-    setTimeout(()=>{
-      this.setState({menuArrowCss: menuArrowNoSpin})
-    }, 500)
+  handleMenuClick(e, url){
+    let clickedOn = e.currentTarget.firstChild.firstChild;
+    clickedOn.style ="animation-name: spin; animation-duration: .4s;"
 
+
+    setTimeout( () =>{ clickedOn.style = "animationName: none;"}, 500)
   }
 
   menuArrow(){
@@ -89,7 +89,7 @@ class TopBar extends Component  {
       <MuiThemeProvider>
         <AppBar className = 'top-bar' title="Mike Mitchell"
           iconElementRight = {<NavButtons/>}
-          iconElementLeft = {<MenuIcon click = {this.handleMenuClick}  clickClose={this.handleRequestClose}/>}
+          iconElementLeft = {<MenuIcon click = {this.handleDrawerClick}  clickClose={this.handleRequestClose}/>}
           style = {appBarStyle.style}
           titleStyle={appBarStyle.titleStyle}
           zDepth= {0}/>
@@ -107,11 +107,11 @@ class TopBar extends Component  {
           <h2 style = {{color: 'white', paddingLeft: '16px'}}>PROJECTS</h2>
 
 
-          <div className='menu-item-wrapper' onClick = {()=> this.delayClick("http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html")}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Monster Run <span className="menu-desc" style={menuDescStyle}>&nbsp;an interactive click game</span></MenuItem></div>
+          <div className='menu-item-wrapper' ref ="test" onClick = {this.handleMenuClick}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Monster Run <span className="menu-desc" style={menuDescStyle}>&nbsp;an interactive click game</span></MenuItem></div>
 
-          <div onClick = {()=> this.delayClick("http://www.mikejmitchell.com/mainPage/sites/Starlight/index.html")}  className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;a basic HTML/CSS website</span></MenuItem></div>
+          <div className='menu-item-wrapper'  onClick = { this.handleMenuClick}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;a basic HTML/CSS website</span></MenuItem></div>
 
-          <div onClick = {()=> this.delayClick("http://www.mikejmitchell.com/mainPage/sites/Portfolio/index.html")}  className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;another basic HTML/CSS website</span></MenuItem></div>
+          <div className='menu-item-wrapper'  ref ="test" onClick = {this.handleMenuClick}  >{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;another basic HTML/CSS website</span></MenuItem></div>
 
         </Drawer>
       </MuiThemeProvider>

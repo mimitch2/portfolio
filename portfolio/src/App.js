@@ -10,6 +10,7 @@ import nextImage from './img/web-design.jpg';
 import './App.css';
 
 
+
 class App extends Component {
 
   render() {

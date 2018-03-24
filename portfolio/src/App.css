@@ -110,6 +110,9 @@ html, body {
   display: flex;
   align-content: center;
   width: max-content;
+  height: max-content;
+  cursor: pointer;
+  /* background-color: red; */
 }/*FIXME put this into AppBar*/
 
 
