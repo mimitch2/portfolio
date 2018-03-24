@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 
 const iconStyles = {
   marginRight: '28px',
-  marginTop: '8px',
   cursor: 'pointer'
 };
 

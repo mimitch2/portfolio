@@ -1,56 +1,84 @@
 
 
 import React, {Component} from 'react';
+import {spin, spinBackward} from './menuIconKeyframes.css';
 
-const menuIconStyle = {
-  display: 'grid',
-  gridTemplateRows: '6px 5px 6px 5px 6px',
+
+
+/*FIXME this is SUPER hacky, need to refactor all the repetition or try to use state*/
+const iconStyleInitial = {
   height: '28px',
   cursor: 'pointer',
-  marginRight: '25px',
+  marginRight: '10px',
   marginLeft: '10px',
-  marginBottom: '8px'
+  marginBottom: '8px',
+  fill: 'white',
 }
 
-const rectOneStyle = {
-  gridRowStart: '1',
+const iconStyleOpen = {
+  animationName: 'spin',
+  animationDuration: '.4s',
+  height: '28px',
+  cursor: 'pointer',
+  marginRight: '10px',
+  marginLeft: '10px',
+  marginBottom: '8px',
+  fill: 'white',
 }
 
-const rectTwoStyle = {
-  gridRowStart: '3'
+const iconStyleClose = {
+  animationName: 'spinBackward',
+  animationDuration: '.4s',
+  height: '28px',
+  cursor: 'pointer',
+  marginRight: '10px',
+  marginLeft: '10px',
+  marginBottom: '8px',
+  fill: 'white',
 }
 
-const rectThreeStyle = {
-  gridRowStart: '5'
+const iconHide = {
+  display: 'none'
 }
 
 class MenuIcon extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      navIconCss: iconStyleInitial,
+      cancelIconCss: iconHide,
+
+    }
+  }
+
+
+  handleMenuClick=()=> {
+    if(this.state.navIconCss === iconStyleInitial || this.state.navIconCss === iconStyleClose) {
+      this.props.click();
+      this.setState({navIconCss: iconHide, cancelIconCss: iconStyleOpen});
+
+    }else{
+      this.props.clickClose();
+      this.setState({navIconCss: iconStyleClose, cancelIconCss: iconHide})
+
+    }
+  }
+
   render() {
-    return (<div className="menu-icon-div" style = {menuIconStyle}  onClick={this.props.click}>
-      <svg width="30px" height="6px" viewBox="0 0 40 6" version="1.1" xmlns="http://www.w3.org/2000/svg"  style = {rectOneStyle}>
+    return (<div>
 
-        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <rect id="rectangle-one" fill="white" x="0" y="0" width="40" height="6" ></rect>
-        </g>
-      </svg>
+      <div style = {this.state.navIconCss}  onClick={this.handleMenuClick}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+      </div>
 
-      <svg width="30px" height="6px" viewBox="0 0 40 6" version="1.1" xmlns="http://www.w3.org/2000/svg" style = {rectTwoStyle}>
+      <div style = {this.state.cancelIconCss} onClick={this.handleMenuClick}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+      </div>
 
-        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <rect id="rectangle-two" fill="white" x="0" y="0" width="40" height="6"></rect>
-        </g>
-      </svg>
-      <svg width="30px" height="6px" viewBox="0 0 40 6" version="1.1" xmlns="http://www.w3.org/2000/svg" style = {rectThreeStyle}>
-
-        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <rect id="rectangle-three" fill="white" x="0" y="0" width="40" height="6" ></rect>
-        </g>
-      </svg>
     </div>);
+
   }
 }
 
 export default MenuIcon;
-
-// <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white" cursor = 'pointer' onClick={this.props.click} className='menu-svg'><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
