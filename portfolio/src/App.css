@@ -15,7 +15,7 @@ html, body {
 .App {
   display: grid;
   grid-template-columns: 8px 1% 125px auto auto;
-  grid-template-rows: 50px 350px 200px 400px 600px 100px auto;
+  grid-template-rows: 50px 350px auto 400px 600px auto 100px 50px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
@@ -91,21 +91,45 @@ html, body {
   margin-top: 50px;
 }
 
+.cocktail-div {
+  grid-column-start: 4;
+  grid-row-start: 6;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 750px;
+  height: auto;
+}
+
+#cocktail-image {
+  max-height: 350px;
+  width: auto;
+  padding: 10px;
+}
+
+h1 {
+  padding: 10px;
+}
+
+#bottom-space {
+  height: 50px;
+  width: 100vw;
+  /* background-color: red; */
+    grid-row-start: 7;
+}
+
 .next-image, .js-comp-image, .web-design-image {
   max-width: 100%;
-
 }
+
+
 
 
 a {
   text-decoration: none!important
 }
 
-.bottom-space {
-  height: 100px;
-  /* background-color: pink; */
-  grid-row-start: 7;
-}
 
 
 
@@ -115,8 +139,8 @@ a {
 }
 
 footer {
-  animation-name: footerFadeIn;
-  animation-duration: .8s;
+  /* animation-name: footerFadeIn;
+  animation-duration: .8s; */
   left: 0;
   bottom: 0;
   position: fixed;
@@ -131,7 +155,7 @@ footer {
   font-size: .8em;
   font-weight: lighter;
   color: white;
-  grid-row-start: 6;
+  grid-row-start: 8;
   grid-column-start: 1;
 }
 

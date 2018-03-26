@@ -50,12 +50,11 @@ class App extends Component {
   }
 
   renderDrink(){
-    const myDrink = this.state.returnedDrink[0]
-    // return (<FetchDrinks name = {this.state.returnedDrink[0].drinks[0].strDrink}/>)
     if(this.state.isLoaded){
-      console.log(myDrink.drinks[0].strDrink)
+      const myDrink = this.state.returnedDrink[0].drinks[0]
+      console.log(myDrink)
+      return (<FetchDrinks name = {myDrink.strDrink} pic = {myDrink.strDrinkThumb}/>)
     }
-    // setTimeout( () => {console.log(myDrink, typeof(myDrink));}, 10000)
   }
 
   render() {
@@ -80,13 +79,12 @@ class App extends Component {
         <div className="js-comp-image-div">
           <img src= {jsCompImage} className = 'js-comp-image' alt="computer with javascript" />
         </div>
+
+        <div className="cocktail-div">
+          {this.renderDrink()}
+        </div>
+        <div id = "bottom-space"></div>
       </Zoom>
-
-      <div className="bottom-space">
-        {this.renderDrink()}
-      </div>
-
-
       <footer className="footer">
           ©Mike Mitchell 2018.  Design & code by Mike Mitchell.
       </footer>

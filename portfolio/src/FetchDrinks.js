@@ -10,8 +10,8 @@ class FetchDrinks extends Component {
 
     return (
       <div className="fetch-drinks">
-        {this.props.name}
-HELOOOOO
+        <h1>{this.props.name}</h1>
+        <img id = "cocktail-image" src={this.props.pic} alt="cocktail" />
       </div>
     );
   }
