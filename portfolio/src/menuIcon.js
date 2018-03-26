@@ -5,7 +5,9 @@ import {spin, spinBackward} from './menuIconKeyframes.css';
 
 
 
-/*FIXME this is SUPER hacky, need to refactor all the repetition or try to use state*/
+/*FIXME this is SUPER hacky, need to refactor all the repetition or try to use state!!*/
+
+
 const iconStyleInitial = {
   height: '28px',
   cursor: 'pointer',

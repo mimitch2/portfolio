@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 
 const iconStyles = {
+  fill: 'white',
+  width: '26px',
   marginRight: '28px',
   cursor: 'pointer'
 };

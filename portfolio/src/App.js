@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Logo from './RenderLogo.js';
-import TopBar from './topBar.js';
+import Logo from './Logo.js';
+import TopBar from './TopBar.js';
 import mainImage from './img/WebDesign.png';
 import jsCompImage from './img/JS_graphoc.png';
 import nextImage from './img/web-design.jpg';
@@ -23,7 +23,7 @@ class App extends Component {
         </div>
 
         <div className="main-intro">
-          <h2 className="intro-headline">Hi, I'm Mike. I design & build websites.</h2>
+          <h1 className="intro-headline">Hi, I'm Mike. I design & build websites.</h1>
           <p className = "intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p> </div>
 
