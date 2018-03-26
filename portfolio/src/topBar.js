@@ -15,8 +15,9 @@ const muitheme = getMuiTheme({
 
 /* ********css styling************/
 const menuArrowDivStyle = {
-  marginTop: '26px',
+  marginTop: '25px',
   paddingLeft: '30px'
+
 
 }
 
