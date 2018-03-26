@@ -7,24 +7,17 @@ import './App.css';
 import {spin} from './menuIconKeyframes.css';
 
 const menuArrowDivStyle = {
-  paddingTop: '42px',
+  marginTop: '26px',
   paddingLeft: '30px'
 
 }
 
-const menuArrowNoSpin = {
-  animationName: 'none',
-}
-
-const menuArrowSpin = {
-  animationName: 'spin',
-  animationDuration: '.4s',
-}
 
 const menuItemStyle = {
+  lineHeight: '24px',
   color: 'white',
   fontSize: '1.7em',
-  marginTop: '30px',
+  marginTop: '24px',
   textTransform: 'uppercase'
 }
 
@@ -40,11 +33,6 @@ const drawerStyle = {
   opacity: '.8',
   marginTop: '64px',
   height: 'calc(100vh - 98.6px)',
-}
-
-
-const linkStyle = {
-  display: 'flex',
 }
 
 
@@ -72,23 +60,23 @@ class TopBar extends Component{
   handleMenuClick(e){
     const getUrl = e.currentTarget;
     const clickedOn = e.currentTarget.firstChild.firstChild;
-    // console.log(clickedOn, e.currentTarget.id);
     clickedOn.style ="animation-name: spin; animation-duration: .4s;"
-    setTimeout( () => {clickedOn.style = "animationName: none;";
-      window.open(getUrl.id, '_blank')}, 500)
+    // setTimeout( () => {clickedOn.style = "animationName: none;";
+    //   window.open(getUrl.id, '_blank')}, 500)
 
   }
 
 
-  menuArrow(){/*FIXME probably make this a variable*/
+  menuArrow(){/*returns the menu arrow*/
     return(<div className="menu-arrow-div" style={menuArrowDivStyle}>
       <svg className="menu-arrow-svg"
         style={this.state.menuArrowCss} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-7 3.333c1.513-6.587 7-7.778 7-7.778v-2.221l5 4.425-5 4.464z"/></svg>
     </div>)
   }
+
   drawerWidth=()=> {
     console.log(window.innerWidth);
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 500) {
       return "100%"
     }else{
       return "50%"
@@ -117,11 +105,11 @@ class TopBar extends Component{
 
           <h2 style = {{color: 'white', paddingLeft: '16px'}}>PROJECTS</h2>
 
-          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html" className='menu-item-wrapper' >{this.menuArrow()}<MenuItem style = {menuItemStyle} selected = {true}>Monster Run<span className="menu-desc" style={menuDescStyle}>&nbsp;an interactive click game</span></MenuItem></div>
+          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html" className='menu-item-wrapper' >{this.menuArrow()}<MenuItem style = {menuItemStyle}>Monster Run <br/><span className="menu-desc" style={menuDescStyle}>an interactive click game</span></MenuItem></div>
 
-          <div onClick = {this.handleMenuClick} id ="http://www.mikejmitchell.com/mainPage/sites/Starlight/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;a basic HTML/CSS website</span></MenuItem></div>
+          <div onClick = {this.handleMenuClick} id ="http://www.mikejmitchell.com/mainPage/sites/Starlight/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;a basic HTML/CSS website</span></MenuItem></div>
 
-          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/Portfolio/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<span className="menu-desc" style={menuDescStyle}>&nbsp;&nbsp;&nbsp;another basic HTML/CSS website</span></MenuItem></div>
+          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/Portfolio/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;another basic HTML/CSS website</span></MenuItem></div>
 
         </Drawer>
       </MuiThemeProvider>
