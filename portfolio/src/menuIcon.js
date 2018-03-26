@@ -8,28 +8,9 @@ import {spin, spinBackward} from './menuIconKeyframes.css';
 /*FIXME this is SUPER hacky, need to refactor all the repetition or try to use state!!*/
 
 
-const iconStyleInitial = {
-  height: '28px',
-  cursor: 'pointer',
-  marginRight: '10px',
-  marginLeft: '10px',
-  marginBottom: '8px',
-  fill: 'white',
-}
-
-const iconStyleOpen = {
-  animationName: 'spin',
-  animationDuration: '.4s',
-  height: '28px',
-  cursor: 'pointer',
-  marginRight: '10px',
-  marginLeft: '10px',
-  marginBottom: '8px',
-  fill: 'white',
-}
-
-const iconStyleClose = {
-  animationName: 'spinBackward',
+let iconStyle = {
+  display: 'block',
+  animationName: 'none',
   animationDuration: '.4s',
   height: '28px',
   cursor: 'pointer',
@@ -48,7 +29,7 @@ class MenuIcon extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navIconCss: iconStyleInitial,
+      navIconCss: iconStyle,
       cancelIconCss: iconHide,
 
     }
@@ -56,13 +37,21 @@ class MenuIcon extends Component {
 
 
   handleMenuClick=()=> {
-    if(this.state.navIconCss === iconStyleInitial || this.state.navIconCss === iconStyleClose) {
-      this.props.click();
-      this.setState({navIconCss: iconHide, cancelIconCss: iconStyleOpen});
 
+    let newNavObj = {...this.state.navIconCss}
+    let newCancelObj = {...this.state.cancelIconCss}
+    if(newNavObj.animationName === 'none' || newNavObj.animationName === 'spinBackward') {
+      newNavObj = {...iconHide}
+      newCancelObj = {...iconStyle}
+      newCancelObj.animationName = 'spin'
+      this.setState({navIconCss: newNavObj, cancelIconCss: newCancelObj})
+      this.props.click();
     }else{
+      newNavObj = {...iconStyle}
+      newCancelObj = {...iconHide}
+      newNavObj.animationName = 'spinBackward'
       this.props.clickClose();
-      this.setState({navIconCss: iconStyleClose, cancelIconCss: iconHide})
+      this.setState({navIconCss: newNavObj, cancelIconCss: newCancelObj})
 
     }
   }
