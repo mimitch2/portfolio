@@ -95,14 +95,7 @@ html, body {
   max-width: 100%;
 
 }
-.menu-item-wrapper {
-  display: flex;
-  align-content: center;
-  width: max-content;
-  height: max-content;
-  cursor: pointer;
-  /* background-color: red; */
-}/*FIXME put this into AppBar*/
+
 
 a {
   text-decoration: none!important
@@ -140,7 +133,7 @@ footer {
   color: white;
   grid-row-start: 6;
   grid-column-start: 1;
-}/*FIXME put this into Footer*/
+}
 
 
 /*MEDIA QUERIES */
