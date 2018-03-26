@@ -5,8 +5,8 @@ import mainImage from './img/WebDesign.png';
 import jsCompImage from './img/JS_graphoc.png';
 import nextImage from './img/web-design.jpg';
 import Zoom from 'react-reveal/Zoom';
-import Slide from 'react-reveal/Slide';
-import Fade from 'react-reveal/Fade';
+// import Slide from 'react-reveal/Slide';
+// import Fade from 'react-reveal/Fade';
 import './App.css';
 
 

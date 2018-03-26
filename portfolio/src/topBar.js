@@ -1,17 +1,32 @@
 import React, {Component} from 'react';
 import MenuIcon from './MenuIcon.js'
-import NavButtons from './navButtons.js';
+import NavButtons from './NavButtons.js';
 import {Drawer, MenuItem, AppBar} from 'material-ui';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './App.css';
 import {spin} from './menuIconKeyframes.css';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
+const muitheme = getMuiTheme({
+  menuItem: {
+    backgroundColor: 'red',
+  },
+});
+
+/* ********css styling************/
 const menuArrowDivStyle = {
   marginTop: '26px',
   paddingLeft: '30px'
 
 }
 
+const menuItemWrapperStyle = {
+  display: 'flex',
+  alignContent: 'center',
+  width: 'maxContent',
+  height: 'maxContent',
+  cursor: 'pointer'
+}
 
 const menuItemStyle = {
   lineHeight: '24px',
@@ -41,6 +56,8 @@ const appBarStyle = {
   titleStyle: {fontSize: '2.0em', textTransform: 'uppercase', fontWeight: 'bold'}
 }
 
+/* ********End css styling************/
+
 class TopBar extends Component{
   constructor(props) {
     super(props);
@@ -61,8 +78,8 @@ class TopBar extends Component{
     const getUrl = e.currentTarget;
     const clickedOn = e.currentTarget.firstChild.firstChild;
     clickedOn.style ="animation-name: spin; animation-duration: .4s;"
-    // setTimeout( () => {clickedOn.style = "animationName: none;";
-    //   window.open(getUrl.id, '_blank')}, 500)
+    setTimeout( () => {clickedOn.style = "animationName: none;";
+      window.open(getUrl.id, '_blank')}, 500)
 
   }
 
@@ -75,7 +92,6 @@ class TopBar extends Component{
   }
 
   drawerWidth=()=> {
-    console.log(window.innerWidth);
     if (window.innerWidth < 500) {
       return "100%"
     }else{
@@ -105,11 +121,11 @@ class TopBar extends Component{
 
           <h2 style = {{color: 'white', paddingLeft: '16px'}}>PROJECTS</h2>
 
-          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html" className='menu-item-wrapper' >{this.menuArrow()}<MenuItem style = {menuItemStyle}>Monster Run <br/><span className="menu-desc" style={menuDescStyle}>an interactive click game</span></MenuItem></div>
+          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle} >{this.menuArrow()}<MenuItem style = {menuItemStyle} muitheme = {muitheme}>Monster Run <br/><span className="menu-desc" style={menuDescStyle}>an interactive click game</span></MenuItem></div>
 
-          <div onClick = {this.handleMenuClick} id ="http://www.mikejmitchell.com/mainPage/sites/Starlight/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;a basic HTML/CSS website</span></MenuItem></div>
+          <div onClick = {this.handleMenuClick} id ="http://www.mikejmitchell.com/mainPage/sites/Starlight/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;a basic HTML/CSS website</span></MenuItem></div>
 
-          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/Portfolio/index.html" className='menu-item-wrapper'>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;another basic HTML/CSS website</span></MenuItem></div>
+          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/Portfolio/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;another basic HTML/CSS website</span></MenuItem></div>
 
         </Drawer>
       </MuiThemeProvider>
