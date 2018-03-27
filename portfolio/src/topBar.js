@@ -2,16 +2,8 @@ import React, {Component} from 'react';
 import MenuIcon from './MenuIcon.js'
 import NavButtons from './NavButtons.js';
 import {Drawer, MenuItem, AppBar} from 'material-ui';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './App.css';
-import {spin} from './menuIconKeyframes.css';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-const muitheme = getMuiTheme({
-  menuItem: {
-    backgroundColor: 'red',
-  },
-});
 
 /* ********css styling************/
 const menuArrowDivStyle = {
@@ -102,34 +94,34 @@ class TopBar extends Component{
 
   render() {
     return (<div className="top-nav">
-      <MuiThemeProvider>
-        <AppBar className = 'top-bar' title="Mike Mitchell"
-          iconElementRight = {<NavButtons/>}
-          iconElementLeft = {<MenuIcon click = {this.handleDrawerClick}  clickClose={this.handleRequestClose}/>}
-          style = {appBarStyle.style}
-          titleStyle={appBarStyle.titleStyle}
-          zDepth= {0}/>
-      </MuiThemeProvider>
 
-      <MuiThemeProvider>
-        <Drawer
-          onClick = {this.getDrawerHeightNumber}
-          containerStyle = {drawerStyle}
-          docked={true} open={this.state.open}
-          zDepth={0}
-          onRequestChange={(open) => this.setState({open})}
-          width={this.drawerWidth()}>
+      <AppBar className = 'top-bar' title="Mike Mitchell"
+        iconElementRight = {<NavButtons/>}
+        iconElementLeft = {<MenuIcon click = {this.handleDrawerClick}  clickClose={this.handleRequestClose}/>}
+        style = {appBarStyle.style}
+        titleStyle={appBarStyle.titleStyle}
+        zDepth= {0}/>
 
-          <h2 style = {{color: 'white', paddingLeft: '16px'}}>PROJECTS</h2>
 
-          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle} >{this.menuArrow()}<MenuItem style = {menuItemStyle} muitheme = {muitheme}>Monster Run <br/><span className="menu-desc" style={menuDescStyle}>an interactive click game</span></MenuItem></div>
 
-          <div onClick = {this.handleMenuClick} id ="http://www.mikejmitchell.com/mainPage/sites/Starlight/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;a basic HTML/CSS website</span></MenuItem></div>
+      <Drawer
+        onClick = {this.getDrawerHeightNumber}
+        containerStyle = {drawerStyle}
+        docked={true} open={this.state.open}
+        zDepth={0}
+        onRequestChange={(open) => this.setState({open})}
+        width={this.drawerWidth()}>
 
-          <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/Portfolio/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;another basic HTML/CSS website</span></MenuItem></div>
+        <h2 style = {{color: 'white', paddingLeft: '16px'}}>PROJECTS</h2>
 
-        </Drawer>
-      </MuiThemeProvider>
+        <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/monster-run/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle} >{this.menuArrow()}<MenuItem style = {menuItemStyle}>Monster Run <br/><span className="menu-desc" style={menuDescStyle}>an interactive click game</span></MenuItem></div>
+
+        <div onClick = {this.handleMenuClick} id ="http://www.mikejmitchell.com/mainPage/sites/Starlight/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Bar Website<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;a basic HTML/CSS website</span></MenuItem></div>
+
+        <div onClick = {this.handleMenuClick} id="http://www.mikejmitchell.com/mainPage/sites/Portfolio/index.html" className='menu-item-wrapper' style = {menuItemWrapperStyle}>{this.menuArrow()}<MenuItem style = {menuItemStyle}>Old Portfolio Site<br/><span className="menu-desc" style={menuDescStyle}>&nbsp;another basic HTML/CSS website</span></MenuItem></div>
+
+      </Drawer>
+
 
     </div>);
   }

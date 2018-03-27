@@ -14,8 +14,8 @@ html, body {
 
 .App {
   display: grid;
-  grid-template-columns: 8px 1% 125px auto auto;
-  grid-template-rows: 50px 350px auto 400px 600px auto 100px 50px;
+  grid-template-columns: 8px  125px;
+  grid-template-rows: 50px 350px 250px 400px 450px 470px 100px 50px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
@@ -91,6 +91,13 @@ html, body {
   margin-top: 50px;
 }
 
+.fetch-drinks {
+  display: flex;
+
+}
+
+
+
 .cocktail-div {
   grid-column-start: 4;
   grid-row-start: 6;
@@ -99,7 +106,13 @@ html, body {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   width: 750px;
-  height: auto;
+  height: max-content;
+}
+
+#recipe-line-one {
+  /* background-color: pink; */
+  margin-left: 40px;
+  margin-top: 100px;
 }
 
 #cocktail-image {
@@ -114,7 +127,7 @@ h1 {
 
 #bottom-space {
   height: 50px;
-  width: 100vw;
+  width: 400px;
   /* background-color: red; */
     grid-row-start: 7;
 }
