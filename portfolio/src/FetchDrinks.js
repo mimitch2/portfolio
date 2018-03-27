@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-const buttonStyle = {
-
-
-}
 
 class FetchDrinks extends Component {
   render() {
@@ -18,9 +14,6 @@ class FetchDrinks extends Component {
           <img id = "cocktail-image" src={this.props.pic} alt="cocktail" />
         </div>
         <div>
-
-
-
 
           <h3 id="recipe-line-one" className = "recipe"> {this.props.measureOne} {this.props.recipeOne}</h3>
         </div>

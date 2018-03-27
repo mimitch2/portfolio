@@ -17,49 +17,35 @@ class App extends Component {
     super(props);
     this.state = {
       isLoaded: false,
-      returnedDrink: []
+      returnedDrink: [],
+      ingredientKeys: []
     };
   }
 
   componentDidMount() {
 
-
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-      .then(res => res.json())
-      .then(
-        (drinkObj) => {
-          const drink = this.state.returnedDrink
-          drink.splice(0, 1, drinkObj)
-          this.setState({
-            isLoaded: true,
-            returnedDrink: drink
-          });
-
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
+    this.getNewDrink()
+    // fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    //   .then(res => res.json())
+    //   .then(
+    //     (drinkObj) => {
+    //       const drink = this.state.returnedDrink
+    //       drink.splice(0, 1, drinkObj)
+    //       this.setState({
+    //         isLoaded: true,
+    //         returnedDrink: drink
+    //       });
+    //
+    //     },
+    //     (error) => {
+    //       this.setState({
+    //         isLoaded: true,
+    //         error
+    //       });
+    //     }
+    //   )
   }
 
-  removeKeys=()=>{
-    console.log(this.state.returnedDrink[0].drinks[0])
-    if(this.state.isLoaded){
-      const newObj = this.state.returnedDrink[0].drinks[0]
-
-      for (let key in newObj) {
-        if(!newObj[key] || newObj[key] === " "){
-          delete newObj[key]
-        }
-        return newObj
-      }
-
-    }
-
-  }
 
   getNewDrink=()=>{
     fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
@@ -83,11 +69,48 @@ class App extends Component {
       )
   }
 
-  renderDrink(){
+  removeEmptyKeys=()=>{
+    const newObj = this.state.returnedDrink[0].drinks[0]
+    for (let key in newObj) {
+      if(!newObj[key] || newObj[key] === " "){
+        delete newObj[key]
+      }
+    }
+    // console.log("newObj = ", newObj);
+    return newObj
+  }
+
+  makeRecipe=()=> {
+    const indredientKeyArr = this.state.ingredientKeys
+    let ingCount = 3
+    // console.log(ingCount);
+    for (var i = 1; i <= ingCount; i++) {
+      const count = i.toString()
+      indredientKeyArr.push(`strIngredient${count}`)
+      // console.log(`strIngredient${count}`, indredientKeyArr);
+    }
+    this.setState({ingredientKeys: indredientKeyArr})
+    // indredientKeyArr.splice(0, 3)
+    console.log(this.state.ingredientKeys);
+
+  }
+
+  renderDrink=()=>{
     if(this.state.isLoaded){
-      
-      const myDrink = this.state.returnedDrink[0].drinks[0]
-      return (<FetchDrinks name = {myDrink.strDrink} pic = {myDrink.strDrinkThumb} recipeOne = {myDrink.strIngredient1} measureOne = {myDrink.strMeasure1}/>)
+      const myDrink = this.removeEmptyKeys()
+      let ingCount = 0;
+      Object.keys(myDrink).forEach((str)=>{
+        if(str.includes('strIngredient')){
+          ingCount ++;
+          // console.log(ingCount);
+        }
+      })
+      let testIng = "strIngredient1"
+      // console.log(testIng, myDrink[testIng]);
+      return (<FetchDrinks name = {myDrink.strDrink} pic = {myDrink.strDrinkThumb}
+        recipeOne = {myDrink[testIng]}
+
+        measureOne = {myDrink.strMeasure1}/>)
     }
   }
 
