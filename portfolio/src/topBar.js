@@ -39,13 +39,13 @@ const menuDescStyle = {
 const drawerStyle = {
   backgroundColor: 'black',
   opacity: '.8',
-  marginTop: '64px',
-  height: 'calc(100vh - 98.6px)',
+  marginTop: '60px',
+  height: 'calc(100vh - 95px)',
 }
 
 
 const appBarStyle = {
-  style: {backgroundColor: '#547373', opacity: '.9', width: '100vw', position: 'fixed', display: 'flex', alignItems: 'center'},
+  style: {backgroundColor: '#547373', opacity: '.9', width: '100vw', height: "60px", position: 'fixed', display: 'flex', alignItems: 'center'},
   titleStyle: {fontSize: '2.0em', textTransform: 'uppercase', fontWeight: 'bold'}
 }
 

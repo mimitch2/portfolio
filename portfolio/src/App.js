@@ -23,27 +23,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-
     this.getNewDrink()
-    // fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-    //   .then(res => res.json())
-    //   .then(
-    //     (drinkObj) => {
-    //       const drink = this.state.returnedDrink
-    //       drink.splice(0, 1, drinkObj)
-    //       this.setState({
-    //         isLoaded: true,
-    //         returnedDrink: drink
-    //       });
-    //
-    //     },
-    //     (error) => {
-    //       this.setState({
-    //         isLoaded: true,
-    //         error
-    //       });
-    //     }
-    //   )
   }
 
 
@@ -76,24 +56,26 @@ class App extends Component {
         delete newObj[key]
       }
     }
-    // console.log("newObj = ", newObj);
     return newObj
   }
 
-  makeRecipe=()=> {
-    const indredientKeyArr = this.state.ingredientKeys
-    let ingCount = 3
-    // console.log(ingCount);
-    for (var i = 1; i <= ingCount; i++) {
-      const count = i.toString()
-      indredientKeyArr.push(`strIngredient${count}`)
-      // console.log(`strIngredient${count}`, indredientKeyArr);
-    }
-    this.setState({ingredientKeys: indredientKeyArr})
-    // indredientKeyArr.splice(0, 3)
-    console.log(this.state.ingredientKeys);
+  /* I want to be able to only display the indgrdients that are present in the object.  I have a count of them, and I have an array of the exact key names that I want to display*/
+  
+    makeRecipe=()=> {
+      const indredientKeyArr = this.state.ingredientKeys
+      let ingCount = 3
+      // console.log(ingCount);
+      for (var i = 1; i <= ingCount; i++) {
+        const count = i.toString()
+        indredientKeyArr.push(`strIngredient${count}`)
+      }
+      this.setState({ingredientKeys: indredientKeyArr})
+      // indredientKeyArr = []  FIXME how to reset this every time???
+      console.log(this.state.ingredientKeys); /*this will now hold the strings for each ingredient, ie strIngredient1, strIngredient2 etcc */
 
-  }
+    }
+
+    /* loops over array and return an <li> for each one*/
 
   renderDrink=()=>{
     if(this.state.isLoaded){
@@ -105,14 +87,16 @@ class App extends Component {
           // console.log(ingCount);
         }
       })
-      let testIng = "strIngredient1"
+      console.log(myDrink);
+      // let testIng = "strIngredient1"
       // console.log(testIng, myDrink[testIng]);
       return (<FetchDrinks name = {myDrink.strDrink} pic = {myDrink.strDrinkThumb}
-        recipeOne = {myDrink[testIng]}
-
-        measureOne = {myDrink.strMeasure1}/>)
+        recipeOne = {myDrink.strIngredient1}
+        measureOne = {myDrink.strMeasure1} instructions = {myDrink.strInstructions}/>)
     }
   }
+
+
 
   render() {
     return (
