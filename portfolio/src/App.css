@@ -189,15 +189,18 @@ footer {
   .top-bar {
     font-size: .6em !important;
   }
+  .menu-icon {
+    height: 16px!important;
+    margin-right: 0px!important;
+    margin-bottom: 6px!important;
+  }
   .logo-div {
     width: 75px;
     height: 100px;
   }
   .nav-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 12px !important;
-    margin-top: 14px !important;
+    font-size: 22px!important;
+    margin-right: 16px !important;
   }
   .main-image-div, .next-image-div, .main-intro, .js-comp-image-div {
     max-width: 400px;
@@ -213,15 +216,18 @@ footer {
   .top-bar {
     font-size: .9em !important;
   }
+  .menu-icon {
+    height: 24px!important;
+    margin-right: 8px!important;
+    margin-bottom: 4px!important;
+  }
   .logo-div {
     width: 100px;
     height: 125px;
   }
   .nav-icon {
-    width: 22px;
-    height: 22px;
+    font-size: 28px!important;
     margin-right: 20px !important;
-    margin-top: 14px !important;
   }
   .main-image-div, .next-image-div, .main-intro, .js-comp-image-div {
     max-width: 500px;

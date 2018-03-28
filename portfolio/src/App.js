@@ -12,6 +12,7 @@ import Zoom from 'react-reveal/Zoom';
 import './App.css';
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -60,7 +61,7 @@ class App extends Component {
   }
 
   /* I want to be able to only display the indgrdients that are present in the object.  I have a count of them, and I have an array of the exact key names that I want to display*/
-  
+
     makeRecipe=()=> {
       const indredientKeyArr = this.state.ingredientKeys
       let ingCount = 3
@@ -111,9 +112,14 @@ class App extends Component {
             </div>
 
             <div className="main-intro">
+            
               <h1 className="intro-headline">Hi, I'm Mike. I design & build websites.</h1>
-              <p className = "intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p> </div>
+              <p className = "intro-text">
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+
 
             <div className="next-image-div">
               <img src= {nextImage} className = 'next-image' alt="more web design"/>
