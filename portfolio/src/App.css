@@ -106,13 +106,6 @@ html, body {
   margin-bottom: 60px; */
 }
 
-button {
-  height: 30px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-
-}
 
 .next-image, .js-comp-image, .web-design-image {
   max-width: 100%;

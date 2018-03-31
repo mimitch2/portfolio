@@ -24,41 +24,21 @@ class App extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.getNewRobot()
-  // }
 
 getInput=(e)=>{
   const tempInput = e.target.value
   this.setState({userInput: tempInput})
-
   return true
-
-
 }
+
   getNewRobot=()=>{
-    // console.log("getrobot");
-    // fetch(`https://robohash.org/${this.state.userInput}.png`)
-    //   .then(res => res.json())
-    //   .then(
-    //     (fetchedRobot) => {
-
-
     this.setState({
       isLoaded: true,
       returnedRobot: `https://robohash.org/${this.state.userInput}.png`,
       userInput: ''
     });
-    //     ;
-    //   },
-    //   (error) => {
-    //     this.setState({
-    //       isLoaded: true,
-    //       error
-    //     });
-    //   }
-    // )
   }
+
   buttonState(){
     if(!this.state.userInput){
       return true
@@ -101,13 +81,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
             <div className="robot">
               <img src={this.state.returnedRobot} style= {{width: '300px', heigth: '300px'}} alt="" />
-              <TextField
-                hintText="Type any name!"
 
-                value={this.state.userInput}
-                onChange={this.getInput} underlineFocusStyle={{borderBottom: "2px solid rgba(84, 115, 115, .8)"}}/>
-              <RaisedButton label="Get robot"  onClick = {this.getNewRobot} disabled={false} />
+              <form onSubmit={(e)=>{this.getNewRobot();
+                e.preventDefault();}}> <TextField
+                  hintText="Type any name!"
+                  value={this.state.userInput}
+                  onChange={this.getInput} underlineFocusStyle={{borderBottom: "2px solid rgba(84, 115, 115, .8)"}} fullWidth={true}/></form>
 
+              <RaisedButton label="Get robot"  onClick = {this.getNewRobot} disabled={this.buttonState()}/>
 
             </div>
 
