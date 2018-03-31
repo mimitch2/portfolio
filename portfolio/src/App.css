@@ -92,12 +92,12 @@ html, body {
 }
 
 @keyframes arrowPulse {
-  from {transform: scale(1); color: black}
-  to {transform: scale(1.2); color: red}
+  from {transform: scale(1.2); color: black}
+  to {transform: scale(1.4); color: red}
 }
 
 
-.fa-arrow-left{
+.fa-long-arrow-alt-left{
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-name: arrowPulse;
@@ -111,7 +111,7 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  width: 800px;
+  width: 850px;
   height: 500px;
 
 }
@@ -120,14 +120,14 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 300px;
+  width: 350px;
   height: 600px;
 
 }
 
 .robot-announce {
   margin-bottom: 50px;
-  margin-left: -30px;
+  margin-left: -80px;
 }
 
 
