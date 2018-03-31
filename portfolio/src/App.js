@@ -30,7 +30,7 @@ class App extends Component {
 
             <div className="main-intro">
 
-              <h1 className="intro-headline">Hi, my name is Mike. I design & build websites.</h1>
+              <h1 className="intro-headline">Hi, I&apos;m Mike. I design & build websites.</h1>
               <p className = "intro-text">
 
 
