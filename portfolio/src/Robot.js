@@ -69,7 +69,7 @@ class Robot extends Component {
   }
 
 
-  getNewWord=(input)=>{//this parses and translates the     character codes for non-latin scripts
+  getNewWord=(input)=>{//this parses and translates the character codes for non-latin scripts
     if(!input.hello.search("&")){
       const newWord = input.hello.replace(/&/g, "").replace(/#/g, "").replace(/;/g, ",").split(',').map(Number)
       const translatedWord = String.fromCharCode(...newWord);
@@ -92,8 +92,8 @@ class Robot extends Component {
     return (
       <div className = 'robot-wrapper'>
         <div className="robot">
-
           <img src={this.state.returnedRobot} style= {{width: '300px', heigth: '300px'}} alt="" />
+
           <h2 className = "greeting-text" style={this.state.cssStyle}>{this.state.greeting} fren. I am {this.state.robotName}.</h2>
 
           <form onSubmit={(e)=>{if (this.state.userInput.length >    0)this.getNewRobot();
