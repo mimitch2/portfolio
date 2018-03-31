@@ -12,7 +12,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 // import Fade from 'react-reveal/Fade';
 import './App.css';
 
-const languages = ['ar', 'az', 'bg', 'bn', 'bs', 'cs', 'da', 'de', 'dz', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fa', 'fi', 'fil', 'fr', 'he', 'hi', 'hr', 'hu', 'hy', 'id', 'it', 'ka', 'kk', 'km', 'ko', 'lo', 'lt', 'lv', 'mk', 'mn', 'ms', 'my', 'ne', 'no', 'ro', 'ru', 'sk', 'sl', 'sq', 'sr', 'sv', 'sw', 'th', 'tk', 'uk', 'vi', 'zh']
+const languages = ['ar', 'az', 'bg', 'bn', 'bs', 'cs', 'da', 'de', 'dz', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fa', 'fi', 'fil', 'fr', 'he', 'hi', 'hr', 'hu', 'hy', 'id', "is", 'it', 'ka', 'kk', 'km', 'ko', 'lo', 'lt', 'lv', 'mk', 'mn', 'ms', 'my', 'ne', 'no', 'ro', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sq', 'sr', 'sv', 'sw', 'th', 'tk', 'uk', 'vi', 'zh']
 
 const style = {
   hide: {
@@ -45,7 +45,6 @@ getInput=(e)=>{
 }
 
   getNewRobot=()=>{
-
     this.setState({
       returnedRobot: `https://robohash.org/${this.state.userInput}.png`,
       robotName: this.state.userInput,
@@ -57,12 +56,10 @@ getInput=(e)=>{
   fetchGreeting=()=>{
     const languageCode = languages[Math.floor((Math.random() * languages.length-1))]
     console.log(languageCode);
-
     fetch(`https://fourtonfish.com/hellosalut/?lang=${languageCode}`)
       .then(res => res.json())
       .then(
         (word) => {
-          // this.getNewWord(word)
           this.setState({
             isLoaded: true,
             greeting: this.getNewWord(word),
@@ -74,7 +71,6 @@ getInput=(e)=>{
             isLoaded: true,
             error
           });
-
         }
       )
   }
@@ -87,9 +83,9 @@ getInput=(e)=>{
       console.log(translatedWord, typeof(translatedWord));
       return translatedWord
     }else{
-      return input.hello
+      const otherNewWord = input.hello.replace(/&/g, "").replace(/#/g, "").replace(/;/g, "")
+      return otherNewWord
     }
-
   }
 
   buttonState=()=>{
