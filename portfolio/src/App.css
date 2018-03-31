@@ -91,6 +91,18 @@ html, body {
   margin-top: 50px;
 }
 
+@keyframes arrowPulse {
+  from {transform: scale(1); color: black}
+  to {transform: scale(1.2); color: red}
+}
+
+.fa-arrow-up{
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: arrowPulse;
+  animation-duration: 1s;
+  align-self: center;
+}
 
 .robot {
   grid-column-start: 4;
@@ -100,8 +112,8 @@ html, body {
   justify-content: flex-end;
   /* background-color: rgba(0, 0, 0, 0.8); */
   /* color: white; */
-  width: 300px;
-  height: 350px;
+  width: 700px;
+  height: 500px;
   /* margin-top: 30px;
   margin-bottom: 60px; */
 }

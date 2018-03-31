@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import MenuIcon from './MenuIcon.js'
-import NavButtons from './NavButtons.js';
+import MenuIcon from './menuIcon.js'
+import NavButtons from './navButtons.js';
 import {Drawer, MenuItem, AppBar} from 'material-ui';
 import './App.css';
 
