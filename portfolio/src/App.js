@@ -82,13 +82,15 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             <div className="robot">
               <img src={this.state.returnedRobot} style= {{width: '300px', heigth: '300px'}} alt="" />
 
-              <form onSubmit={(e)=>{this.getNewRobot();
-                e.preventDefault();}}> <TextField
+              <form onSubmit={(e)=>{if (this.state.userInput.length > 0)this.getNewRobot();
+                e.preventDefault()}}> <TextField
+                  style={{fontSize: '18px'}}
+                  type="text"
                   hintText="Type any name!"
                   value={this.state.userInput}
                   onChange={this.getInput} underlineFocusStyle={{borderBottom: "2px solid rgba(84, 115, 115, .8)"}} fullWidth={true}/></form>
 
-              <RaisedButton label="Get robot"  onClick = {this.getNewRobot} disabled={this.buttonState()}/>
+              <RaisedButton label="Get robot"  onClick = {this.getNewRobot} style={{fontSize:'18px'}} disabled={this.buttonState()}/>
 
             </div>
 
