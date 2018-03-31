@@ -14,8 +14,8 @@ html, body {
 
 .App {
   display: grid;
-  grid-template-columns: 8px 1% 125px auto auto;
-  grid-template-rows: 50px 350px 200px 400px 600px 100px auto;
+  grid-template-columns: 8px  125px;
+  grid-template-rows: 50px 350px 250px 400px 450px 470px 100px 50px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
@@ -91,23 +91,29 @@ html, body {
   margin-top: 50px;
 }
 
-.next-image, .js-comp-image, .web-design-image {
-  max-width: 100%;
 
+.robot {
+  grid-column-start: 4;
+  grid-row-start: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* color: white; */
+  width: 300px;
+  height: 350px;
+  /* margin-top: 30px;
+  margin-bottom: 60px; */
 }
 
+
+.next-image, .js-comp-image, .web-design-image {
+  max-width: 100%;
+}
 
 a {
   text-decoration: none!important
 }
-
-.bottom-space {
-  height: 100px;
-  /* background-color: pink; */
-  grid-row-start: 7;
-}
-
-
 
 @keyframes footerFadeIn {
   from {margin-bottom: -50px; opacity: 0;}
@@ -115,8 +121,8 @@ a {
 }
 
 footer {
-  animation-name: footerFadeIn;
-  animation-duration: .8s;
+  /* animation-name: footerFadeIn;
+  animation-duration: .8s; */
   left: 0;
   bottom: 0;
   position: fixed;
@@ -131,7 +137,7 @@ footer {
   font-size: .8em;
   font-weight: lighter;
   color: white;
-  grid-row-start: 6;
+  grid-row-start: 8;
   grid-column-start: 1;
 }
 
@@ -142,15 +148,18 @@ footer {
   .top-bar {
     font-size: .6em !important;
   }
+  .menu-icon {
+    height: 16px!important;
+    margin-right: 0px!important;
+    margin-bottom: 6px!important;
+  }
   .logo-div {
     width: 75px;
     height: 100px;
   }
   .nav-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 12px !important;
-    margin-top: 14px !important;
+    font-size: 22px!important;
+    margin-right: 16px !important;
   }
   .main-image-div, .next-image-div, .main-intro, .js-comp-image-div {
     max-width: 400px;
@@ -166,15 +175,18 @@ footer {
   .top-bar {
     font-size: .9em !important;
   }
+  .menu-icon {
+    height: 24px!important;
+    margin-right: 8px!important;
+    margin-bottom: 4px!important;
+  }
   .logo-div {
     width: 100px;
     height: 125px;
   }
   .nav-icon {
-    width: 22px;
-    height: 22px;
+    font-size: 28px!important;
     margin-right: 20px !important;
-    margin-top: 14px !important;
   }
   .main-image-div, .next-image-div, .main-intro, .js-comp-image-div {
     max-width: 500px;
