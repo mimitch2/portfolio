@@ -46,7 +46,7 @@ const drawerStyle = {
 
 const appBarStyle = {
   style: {backgroundColor: '#547373', opacity: '.9', width: '100vw', height: "60px", position: 'fixed', display: 'flex', alignItems: 'center'},
-  titleStyle: {fontSize: '2.0em', textTransform: 'uppercase', fontWeight: 'bold'}
+  titleStyle: {fontSize: '2.0em', textTransform: 'uppercase', fontWeight: 'bold', }
 }
 
 /* ********End css styling************/

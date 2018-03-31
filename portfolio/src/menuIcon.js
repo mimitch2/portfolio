@@ -5,10 +5,10 @@ import {spin, spinBackward} from './menuIconKeyframes.css';
 
 
 
-/*FIXME this is SUPER hacky, need to refactor all the repetition or try to use state!!*/
+/*FIXME Can i use this as a descrete component????*/
 
 
-let iconStyle = {
+const iconStyle = {
   display: 'block',
   animationName: 'none',
   animationDuration: '.4s',
