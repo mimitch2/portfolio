@@ -1,0 +1,61 @@
+Html Webpack Plugin:
+<pre>
+  Error: Parse Error: <link rel="stylesheet" <link href="https://fonts.googleapis.com/css?family=  Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8  iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></scri  pt>
+    <title>Mike Mitchell</title>
+  <link href="/portfolio/static/css/main.7ca5fcc8.css" rel="stylesheet"></head>
+  <body>
+    <noscript>
+        You need to enable JavaScript to run this app.
+      </noscript>
+    <div id="root"></div>
+    <!--
+        This HTML file is a template.
+        If you open it directly in the browser, you will see an empty page.
+        You can add webfonts, meta tags, or analytics to this file.
+        The build step will place the bundled scripts into the <body> tag.
+        To begin the development, run `npm start` or `yarn start`.
+        To create a production bundle, use `npm run build` or `yarn build`.
+      -->
+  <script type="text/javascript" src="/portfolio/static/js/main.b22c05d5.js"></script></body>
+  </html>
+  
+  - htmlparser.js:235 new HTMLParser
+    [reactPortfolio]/[html-minifier]/src/htmlparser.js:235:13
+  
+  - htmlminifier.js:944 minify
+    [reactPortfolio]/[html-minifier]/src/htmlminifier.js:944:3
+  
+  - htmlminifier.js:1304 exports.minify
+    [reactPortfolio]/[html-minifier]/src/htmlminifier.js:1304:10
+  
+  - index.js:296 
+    [reactPortfolio]/[html-webpack-plugin]/index.js:296:16
+  
+  - util.js:16 tryCatcher
+    [reactPortfolio]/[bluebird]/js/release/util.js:16:23
+  
+  - promise.js:512 Promise._settlePromiseFromHandler
+    [reactPortfolio]/[bluebird]/js/release/promise.js:512:31
+  
+  - promise.js:569 Promise._settlePromise
+    [reactPortfolio]/[bluebird]/js/release/promise.js:569:18
+  
+  - promise.js:614 Promise._settlePromise0
+    [reactPortfolio]/[bluebird]/js/release/promise.js:614:10
+  
+  - promise.js:693 Promise._settlePromises
+    [reactPortfolio]/[bluebird]/js/release/promise.js:693:18
+  
+  - async.js:133 Async._drainQueue
+    [reactPortfolio]/[bluebird]/js/release/async.js:133:16
+  
+  - async.js:143 Async._drainQueues
+    [reactPortfolio]/[bluebird]/js/release/async.js:143:10
+  
+  - async.js:17 Immediate.Async.drainQueues
+    [reactPortfolio]/[bluebird]/js/release/async.js:17:14
+  
+</pre>
